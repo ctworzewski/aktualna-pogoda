@@ -10,7 +10,13 @@ function dataWeather(data) {
     nameCity.innerHTML = data.name;
 
     const localTime = document.getElementById('localTime');
-    localTime.innerHTML = data.timezone;
+
+    const time = new Date();
+    const godzina = time.getHours();
+    const minuta = time.getMinutes();
+    const sekunda = time.getSeconds();
+console.log(godzina)
+    localTime.innerHTML = `${godzina}:${minuta}:${sekunda}`;
 
     const valueTemperature = document.getElementById('valueTemperature');
     valueTemperature.innerHTML = data.main.temp;
