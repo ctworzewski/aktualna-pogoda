@@ -15,7 +15,6 @@ function dataWeather(data) {
     const godzina = time.getHours();
     const minuta = time.getMinutes();
     const sekunda = time.getSeconds();
-console.log(godzina)
     localTime.innerHTML = `${godzina}:${minuta}:${sekunda}`;
 
     const valueTemperature = document.getElementById('valueTemperature');
